@@ -87,25 +87,42 @@ La documentación interactiva de la API está disponible a través de Swagger UI
 
 Resumen de los endpoints principales:
 
--   **`POST /auth/register`**: Registra un nuevo usuario.
--   **`POST /auth/login`**: Inicia sesión y devuelve un token JWT.
+- **`POST /auth/register`**  
+  Registra un nuevo usuario.
 
--   **`GET /tasks`**: Lista tareas (creadas por o asignadas al usuario autenticado). Soporta filtrado por `status` y `priority` (query params).
--   **`POST /tasks`**: Crea una nueva tarea; Json ejemplo:
+- **`POST /auth/login`**  
+  Inicia sesión y devuelve un token JWT.
+
+- **`GET /tasks`**  
+  Lista tareas (creadas por o asignadas al usuario autenticado).  
+  Soporta filtrado por `status` y `priority` (query params).
+
+- **`POST /tasks`**  
+  Crea una nueva tarea.  
+  **JSON de ejemplo:**
+
     {
-         "title": "Implementar autenticación JWT y refresh tokens",
-         "description": "Desarrollar el sistema de autenticación usando JWT.",
-         "due_date": "2024-06-20T00:00:00Z", // ISO 8601 - YYYY-MM-DDThh:mm:ssZ
-          "priority": "high",
-         "status": "in_progress",
-         "assignee_id": "UUID de User" // Opcional, para reasignar la tarea
+      "title":       "Implementar autenticación JWT y refresh tokens",
+      "description": "Desarrollar el sistema de autenticación usando JWT.",
+      "due_date":    "2024-06-20T00:00:00Z",
+      "priority":    "high",
+      "status":      "in_progress",
+      "assignee_id": "UUID de User"
     }
--   **`GET /tasks/{id}`**: Obtiene detalles de una tarea específica por ID.
--   **`PUT /tasks/{id}`**: Actualiza una tarea específica por ID; Json Ejemplo:
+
+- **`GET /tasks/{id}`**  
+  Obtiene detalles de una tarea específica por ID.
+
+- **`PUT /tasks/{id}`**  
+  Actualiza una tarea específica por ID.  
+  **JSON de ejemplo:**
+
     {
-        "assignee_id": "UUID de User"
+      "assignee_id": "UUID de User"
     }
--   **`DELETE /tasks/{id}`**: Elimina una tarea específica por ID.
+
+- **`DELETE /tasks/{id}`**  
+  Elimina una tarea específica por ID.
 
 ---
 Desarrollado por:
