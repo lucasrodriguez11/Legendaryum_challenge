@@ -1,0 +1,46 @@
+# Binarios y archivos compilados
+/bin/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Archivos de IDE y editores
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Archivos de entorno
+.env
+.env.*
+!.env.example
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos de logs
+*.log
+
+# Archivos temporales
+tmp/
+temp/
+
+# Archivos de test
+*.test
+*.out
+coverage.txt
+
+# Archivos de dependencias
+/vendor/
+
+# Archivos de migración generados
+*.sqlite
+*.db
+
+# Archivos de configuración local
+config.local.yaml
+config.dev.yaml 
